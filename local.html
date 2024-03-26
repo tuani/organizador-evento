@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Local</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"><img src="img/1.png"> </div>
+        <form>
+            <div class="form-control">
+                <label for="local">Qual o local desejado para o evento?</label>
+                <div class="input-with-icon">
+                    <input type="text" class="field">
+                    <div class="info-icon"><img src="img/informacao.png">
+                        <div class="observacao"><strong>Exemplo de local:</strong><br>1. Galeria de arte <br> 2. Jardim
+                            ou área ao ar livre <br> 3. Restaurante <br> 4. Salão de festas </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-control">
+                <label for="numeroConvidados">Qual o numero de convidados?</label>
+                <input type="number" class="field">
+            </div>
+            <button type="submit">Enviar</button>
+            <div id="success-message">O formulário foi enviado com sucesso! Em breve entraremos em contato.</div>
+        </form>
+    </div>
+    <script>
+        const submitButton = document.querySelector("button[type='submit']");
+
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const successMessage = document.getElementById("success-message");
+
+            successMessage.style.display = "block";
+        });
+    </script>
+</html>
